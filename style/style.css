@@ -1,0 +1,40 @@
+#container
+{
+    width: 1024px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.splide__slide 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    box-shadow: 10px 10px 10px black;
+}
+
+img
+{
+    filter: blur(2px);
+    width: 1024px;
+}
+
+#text-centered
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-absolute
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 72px;
+    text-shadow: 2px 2px 2px black;
+}

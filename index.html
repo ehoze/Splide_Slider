@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <head>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+        <link rel="stylesheet" href="style/skyblue.min.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="splide" class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide"><img src="assets/carimg.jpeg"></div>
+                            <div class="splide__slide"><img src="assets/carimg.jpeg"></div>
+                            <div class="splide__slide"><img src="assets/carimg.jpeg"></div>
+                        </div>
+                        <div id="text-centered">
+                            <div id="text-absolute">
+                                SPLIDER SLIDER
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="splide__progress">
+                        <div class="splide__progress__bar">
+                        </div>
+                    </div>
+            </div>
+        </div>          
+    </body>
+    <script>
+	new Splide( '.splide' ).mount();
+
+
+    document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide( '.splide' ).mount();
+	} );
+
+
+    var elms = document.getElementsByClassName( 'splide' );
+for ( var i = 0, len = elms.length; i < len; i++ ) {
+	new Splide( elms[ i ] ).mount();
+}
+
+var splide = new Splide( '#splide' );
+
+splide.on( 'autoplay:playing', function ( rate ) {
+	console.log( rate ); // 0-1
+} );
+
+splide.mount();
+    </script>
+</html>
